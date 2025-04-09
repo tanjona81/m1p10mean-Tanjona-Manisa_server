@@ -4,14 +4,14 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'mailteste81t@gmail.com',
-    pass: 'bcdwegwxynsdhrxk'
+    user: '',
+    pass: ''
   }
 });
 const validation = (email, name, date, heure) => {
   // Define email options
   const mailOptions = {
-    from: '"Beauty Salon support" mailteste81t@gmail.com', // Sender email address
+    from: '"Beauty Salon support" ', // Sender email address
     to: email, // Recipient email address
     subject: 'Validation of your meeting', // Email subject
     html: `<h2>Hello ${name},</h2> 
@@ -32,7 +32,7 @@ const validation = (email, name, date, heure) => {
 const reminder = (email, name, date, heure) => {
   // Define email options
   const mailOptions = {
-    from: '"Beauty Salon support" mailteste81t@gmail.com', // Sender email address
+    from: '"Beauty Salon support"', // Sender email address
     to: email, // Recipient email address
     subject: 'Reminder of your meeting', // Email subject
     html: `<h2>Hello ${name},</h2> 
@@ -53,7 +53,7 @@ const reminder = (email, name, date, heure) => {
 const sendOffer = (email, name, service_name, reduction, date_heure_fin) => {
   // Define email options
   const mailOptions = {
-    from: '"Beauty Salon support" mailteste81t@gmail.com', // Sender email address
+    from: '"Beauty Salon support" ', // Sender email address
     to: email, // Recipient email address
     subject: 'Special Offer for you', // Email subject
     html: `<h2>Hello ${name},</h2> 
